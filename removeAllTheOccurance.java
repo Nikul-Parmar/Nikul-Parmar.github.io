@@ -1,0 +1,30 @@
+package Strings;
+
+import java.util.Scanner;
+
+public class removeAllTheOccurance {
+
+    public static String removeAllOccurrencesOfChar(String str, char ch) {
+        String ans = "";
+        int i = 0;
+        while (i < str.length()) {
+            if (str.charAt(i) == ch) {
+                i++;
+            } else if (str.charAt(i) != ch) {
+
+                ans += str.charAt(i);
+                i++;
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        Scanner sr = new Scanner(System.in);
+        String str = sr.nextLine();
+        char x = sr.next().charAt(0);
+        String ans = removeAllOccurrencesOfChar(str, x);
+        System.out.println(ans);
+
+    }
+}
